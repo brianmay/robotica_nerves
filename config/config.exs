@@ -66,6 +66,7 @@ config :nerves_init_gadget,
   ssh_console_port: 22
 
 config :logger, backends: [RingLogger]
+config :logger, RingLogger, max_size: 1000
 
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
