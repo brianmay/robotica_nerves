@@ -37,8 +37,8 @@ defmodule RoboticaNerves.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:nerves, "~> 1.0", runtime: false},
-      {:shoehorn, "~> 0.2"}
+      {:nerves, "~> 1.2", runtime: false},
+      {:shoehorn, "~> 0.3"}
     ] ++ deps(@target)
   end
 
@@ -47,10 +47,10 @@ defmodule RoboticaNerves.MixProject do
 
   defp deps(target) do
     [
-      {:nerves_runtime, "~> 0.4"},
+      {:nerves_runtime, "~> 0.6"},
       {:nerves_network, "~> 0.3"},
       {:nerves_ntp, "~> 0.1.0"},
-      {:nerves_init_gadget, "~> 0.3"},
+      {:nerves_init_gadget, "~> 0.4"},
       {:robotica, path: "../robotica-elixir"}
     ] ++ system(target)
   end
@@ -58,7 +58,7 @@ defmodule RoboticaNerves.MixProject do
   defp system("rpi"), do: [{:nerves_system_rpi, "~> 1.0", runtime: false}]
   defp system("rpi0"), do: [{:nerves_system_rpi0, "~> 1.0", runtime: false}]
   defp system("rpi2"), do: [{:nerves_system_rpi2, path: "../robotica_rpi2", runtime: false}]
-  defp system("rpi3"), do: [{:nerves_system_rpi3, "~> 1.0", runtime: false}]
+  defp system("rpi3"), do: [{:nerves_system_rpi3, path: "../robotica_rpi3", runtime: false}]
   defp system("bbb"), do: [{:nerves_system_bbb, "~> 1.0", runtime: false}]
   defp system("ev3"), do: [{:nerves_system_ev3, "~> 1.0", runtime: false}]
   defp system("qemu_arm"), do: [{:nerves_system_qemu_arm, "~> 1.0", runtime: false}]
