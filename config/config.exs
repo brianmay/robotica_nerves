@@ -32,7 +32,15 @@ config :nerves, :firmware, rootfs_overlay: "rootfs_overlay"
 # docs for separating out critical OTP applications such as those
 # involved with firmware updates.
 config :shoehorn,
-  init: [:nerves_runtime, :nerves_network, :nerves_time, :nerves_init_gadget, :lifx, :robotica],
+  init: [
+    :nerves_runtime,
+    :nerves_network,
+    :nerves_time,
+    :nerves_init_gadget,
+    :lifx,
+    {RoboticaNerves.Application, :config, []},
+    :robotica
+  ],
   app: Mix.Project.config()[:app]
 
 config :nerves_network,
