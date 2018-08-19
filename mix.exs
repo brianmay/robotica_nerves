@@ -49,7 +49,7 @@ defmodule RoboticaNerves.MixProject do
     [
       {:nerves_runtime, "~> 0.6"},
       {:nerves_network, "~> 0.3"},
-      {:nerves_ntp, "~> 0.1.0"},
+      {:nerves_time, "~> 0.2.0"},
       {:nerves_init_gadget, "~> 0.4"},
       {:robotica, path: "../robotica-elixir"}
     ] ++ system(target)
