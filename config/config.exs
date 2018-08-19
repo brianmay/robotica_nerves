@@ -5,6 +5,25 @@
 # is restricted to this project.
 use Mix.Config
 
+config :robotica,
+  config_file: "/etc/robotica/config-{hostname}.yaml",
+  classifications_file: "classifications.yaml",
+  schedule_file: "schedule.yaml",
+  sequences_file: "sequences.yaml",
+  timezone: "Australia/Melbourne"
+
+config :lifx,
+  tcp_server: false,
+  tcp_port: 8800,
+  multicast: {192, 168, 5, 255},
+  poll_state_time: 10 * 60 * 1000,  #  Don't make this too small or the poller task will fall behind.
+  poll_discover_time: 1 * 60 * 10000,
+  max_api_timeout: 5000,      # Should be at least max_retries*wait_between_retry.
+  max_retries: 3,
+  wait_between_retry: 500
+
+config :tzdata, :autoupdate, :disabled
+
 # Customize non-Elixir parts of the firmware.  See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.
 config :nerves, :firmware, rootfs_overlay: "rootfs_overlay"
@@ -13,7 +32,7 @@ config :nerves, :firmware, rootfs_overlay: "rootfs_overlay"
 # docs for separating out critical OTP applications such as those
 # involved with firmware updates.
 config :shoehorn,
-  init: [:nerves_runtime, :nerves_network, :nerves_ntp, :nerves_init_gadget],
+  init: [:nerves_runtime, :nerves_network, :nerves_ntp, :nerves_init_gadget, :lifx, :robotica],
   app: Mix.Project.config()[:app]
 
 config :nerves_network,
@@ -44,6 +63,8 @@ config :nerves_firmware_ssh,
   ]
 
 config :nerves_init_gadget,
+  ifname: "wlan0",
+  mdns_domain: :hostname,
   ssh_console_port: 22
 
 config :logger, backends: [RingLogger]
