@@ -30,3 +30,6 @@ plugins:
     location: "Brian"
     config:
         lights: ["Brian"]
+  - module: MQTT
+    location: "Brian"
+    config: {}
