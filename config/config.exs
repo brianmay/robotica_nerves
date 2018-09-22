@@ -73,7 +73,8 @@ config :nerves_firmware_ssh,
 config :nerves_init_gadget,
   ifname: "wlan0",
   mdns_domain: :hostname,
-  ssh_console_port: 22
+  ssh_console_port: 22,
+  address_method: :dhcp
 
 config :logger, backends: [RingLogger]
 config :logger, RingLogger, max_size: 1000
