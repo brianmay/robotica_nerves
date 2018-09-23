@@ -22,6 +22,10 @@ defmodule RoboticaNerves.Application do
       File.mkdir!("/root/mpd")
     end
 
+    if not File.exists?("/root/mpd/music") do
+      0 = cmd("cp", ["-a", "/var/lib/mpd/music", "/root/mpd/music"])
+    end
+
     if not File.exists?("/root/mpd/playlists") do
       0 = cmd("cp", ["-a", "/var/lib/mpd/playlists", "/root/mpd/playlists"])
     end
