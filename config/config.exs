@@ -76,7 +76,12 @@ config :nerves_init_gadget,
   ssh_console_port: 22,
   address_method: :dhcp
 
-config :logger, backends: [RingLogger]
+config :logger,
+  backends: [RingLogger],
+  compile_time_purge_matching: [
+    [level_lower_than: :info]
+  ]
+
 config :logger, RingLogger, max_size: 1000
 
 # Import target specific config. This must remain at the bottom
