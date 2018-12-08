@@ -38,22 +38,39 @@ defmodule RoboticaNerves.MixProject do
   defp deps do
     [
       {:nerves, "~> 1.3", runtime: false},
-      {:shoehorn, "~> 0.4"}
+      {:shoehorn, "~> 0.4"},
+      {:robotica, path: "../robotica"},
+      {:robotica_ui, path: "../robotica_ui"}
     ] ++ deps(@target)
   end
 
   # Specify target specific dependencies
-  defp deps("host"), do: []
+  defp deps("host") do
+    [
+      {:scenic_driver_glfw, "~> 0.9"}
+    ]
+  end
 
-  defp deps(target) do
+  defp deps("rpi3" = target) do
+    deps_nerves() ++
+      [
+        {:scenic_driver_nerves_rpi, "~> 0.9"},
+        {:scenic_driver_nerves_touch, "~> 0.9"}
+      ] ++ system(target)
+  end
+
+  defp deps("rpi2" = target) do
+    deps_nerves() ++ system(target)
+  end
+
+  defp deps_nerves() do
     [
       {:nerves_runtime, "~> 0.6"},
       {:nerves_network, "~> 0.3"},
       {:nerves_time, "~> 0.2.0"},
       {:nerves_init_gadget, "~> 0.4"},
-      {:dns, path: "../elixir-dns", override: true},
-      {:robotica, path: "../robotica-elixir"}
-    ] ++ system(target)
+      {:dns, "~> 2.1.2"}
+    ]
   end
 
   defp system("rpi"), do: [{:nerves_system_rpi, "~> 1.0", runtime: false}]
