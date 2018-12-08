@@ -25,6 +25,7 @@ defmodule RoboticaNerves.Application do
     end
 
     Logger.debug("Starting mpd.")
+
     case cmd("mpd", []) do
       0 ->
         nil
