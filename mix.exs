@@ -40,7 +40,8 @@ defmodule RoboticaNerves.MixProject do
       {:nerves, "~> 1.3", runtime: false},
       {:shoehorn, "~> 0.4"},
       {:robotica, path: "../robotica"},
-      {:robotica_ui, path: "../robotica_ui"}
+      {:robotica_ui, path: "../robotica_ui"},
+      {:ring_logger, "~> 0.6"}
     ] ++ deps(@target)
   end
 

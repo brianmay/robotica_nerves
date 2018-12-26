@@ -35,7 +35,7 @@
   "parse_trans": {:hex, :parse_trans, "3.3.0", "09765507a3c7590a784615cfd421d101aec25098d50b89d7aa1d66646bc571c1", [:rebar3], [], "hexpm"},
   "poison": {:hex, :poison, "4.0.1", "bcb755a16fac91cad79bfe9fc3585bb07b9331e50cfe3420a24bcc2d735709ae", [:mix], [], "hexpm"},
   "ranch": {:hex, :ranch, "1.7.1", "6b1fab51b49196860b733a49c07604465a47bdb78aa10c1c16a3d199f7f8c881", [:rebar3], [], "hexpm"},
-  "ring_logger": {:hex, :ring_logger, "0.5.0", "dcf9455914c1969b2d55cacb7d37fc9e4ac02d65b1c3de8135c531497f8aed51", [:mix], [], "hexpm"},
+  "ring_logger": {:hex, :ring_logger, "0.6.1", "568dbd9eebf26c661427de5204d8a91adaa740993f3ac5aa450257f62b6e7178", [:mix], [], "hexpm"},
   "scenic": {:hex, :scenic, "0.9.0", "129594f918b4e2dd97465b95b4fb3582294ac6bb3e931f12edd09913743964eb", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "scenic_clock": {:hex, :scenic_clock, "0.8.0", "fc1444307062411a3c741c505ae349f2dfd7f5cb71787dfc2fc1b4298daee042", [:mix], [{:scenic, "~> 0.8", [hex: :scenic, repo: "hexpm", optional: false]}, {:timex, "~> 3.3", [hex: :timex, repo: "hexpm", optional: false]}], "hexpm"},
   "shoehorn": {:hex, :shoehorn, "0.4.0", "f3830e22e1c58b502e8c436623804c4eb6ed15f5d0bdbacdeb448cddf4795951", [:mix], [{:distillery, "~> 2.0", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},

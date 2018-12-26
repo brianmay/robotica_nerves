@@ -15,6 +15,3 @@ config :robotica_ui, :viewport, %{
 
 config :robotica,
   config_file: "config.yaml"
-
-config :logger,
-  backends: [:console]
