@@ -29,6 +29,9 @@ plugins:
               - ["mpc", "pause-if-playing"]
             music_resume:
               - ["mpc", "play"]
+  - module: event_bus
+    location: "Brian"
+    config: {}
   - module: LIFX
     location: "Brian"
     config:
