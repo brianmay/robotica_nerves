@@ -76,8 +76,8 @@ defmodule RoboticaNerves.MixProject do
 
   defp system("rpi"), do: [{:nerves_system_rpi, "~> 1.0", runtime: false}]
   defp system("rpi0"), do: [{:nerves_system_rpi0, "~> 1.0", runtime: false}]
-  defp system("rpi2"), do: [{:nerves_system_rpi2, path: "../robotica_rpi2", runtime: false}]
-  defp system("rpi3"), do: [{:nerves_system_rpi3, path: "../robotica_rpi3", runtime: false}]
+  defp system("rpi2"), do: [{:nerves_system_rpi2, "~> 1.0", runtime: false}]
+  defp system("rpi3"), do: [{:robotica_rpi3, "~> 1.0", runtime: false}]
   defp system("bbb"), do: [{:nerves_system_bbb, "~> 1.0", runtime: false}]
   defp system("ev3"), do: [{:nerves_system_ev3, "~> 1.0", runtime: false}]
   defp system("qemu_arm"), do: [{:nerves_system_qemu_arm, "~> 1.0", runtime: false}]
