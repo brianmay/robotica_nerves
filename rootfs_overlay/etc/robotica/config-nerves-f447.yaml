@@ -2,7 +2,7 @@ mqtt:
   host: proxy.pri
   port: 1883
 plugins:
-  - module: Audio
+  - module: Robotica.Plugins.Audio
     location: "Brian"
     config:
         sounds:
@@ -29,13 +29,13 @@ plugins:
               - ["mpc", "pause-if-playing"]
             music_resume:
               - ["mpc", "play"]
-  - module: event_bus
+  - module: RoboticaUi.RoboticaPlugin
     location: "Brian"
     config: {}
-  - module: LIFX
+  - module: Robotica.Plugins.LIFX
     location: "Brian"
     config:
         lights: ["Brian"]
-  - module: MQTT
+  - module: Robotica.Plugins.MQTT
     location: "Brian"
     config: {}
