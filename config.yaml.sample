@@ -1,24 +1,26 @@
 mqtt:
-  host: proxy.pri
-  port: 1883
+  host: mqtt.example.org
+  port: 8883
+  user_name: username
+  password: password
+  ca_cert_file: "cafile.pem"
 plugins:
   - module: Robotica.Plugins.Audio
     location: "Brian"
     config:
         sounds:
-            beep: "/etc/sounds/ding1.wav"
-            prefix: "/etc/sounds/login.wav"
-            repeat: "/etc/sounds/cymbal.wav"
-            postfix: "/etc/sounds/logout.wav"
+            beep: "sounds/ding1.wav"
+            prefix: "sounds/login.wav"
+            repeat: "sounds/cymbal.wav"
+            postfix: "sounds/logout.wav"
         commands:
             init:
-              - ["amixer", "cset", "numid=3", "1"]
-              - ["amixer", "sset", "PCM", "100%"]
+              - ["amixer", "sset", "Master", "100%"]
               - ["mpc", "repeat", "on"]
             play:
               - ["aplay", "-q", "{file}"]
             say:
-              - ["speech", "{text}"]
+              - ["espeak", "-ven+f5", "-k5", "{text}"]
             music_play:
               - ["mpc", "clear"]
               - ["mpc", "load", "{play_list}"]
@@ -29,9 +31,6 @@ plugins:
               - ["mpc", "pause-if-playing"]
             music_resume:
               - ["mpc", "play"]
-  - module: RoboticaUi.RoboticaPlugin
-    location: "Brian"
-    config: {}
   - module: Robotica.Plugins.LIFX
     location: "Brian"
     config:
