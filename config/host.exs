@@ -9,9 +9,12 @@ config :robotica_ui, :viewport, %{
       module: Scenic.Driver.Glfw,
       name: :glfw,
       opts: [resizeable: false, title: "robotica_ui"]
-     }
-   ]
+    }
+  ]
 }
 
 config :robotica,
   config_file: "config.yaml"
+
+config :robotica_ui,
+  config_file: "ui.yaml"

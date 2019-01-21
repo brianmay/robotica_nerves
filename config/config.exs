@@ -12,6 +12,9 @@ config :robotica,
   sequences_file: "sequences.yaml",
   timezone: "Australia/Melbourne"
 
+config :robotica_ui,
+  config_file: "/etc/robotica/ui-{hostname}.yaml"
+
 config :lifx,
   tcp_server: false,
   tcp_port: 8800,
@@ -88,4 +91,4 @@ config :logger, RingLogger, max_size: 1000
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations
 
-import_config "#{Mix.Project.config[:target]}.exs"
+import_config "#{Mix.Project.config()[:target]}.exs"
