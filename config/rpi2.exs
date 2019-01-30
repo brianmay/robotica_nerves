@@ -17,3 +17,5 @@ config :robotica_ui, :viewport, %{
     }
   ]
 }
+
+config :tzdata, :data_dir, "/root/elixir_tzdata_data"

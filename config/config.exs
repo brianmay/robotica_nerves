@@ -13,7 +13,8 @@ config :robotica,
   timezone: "Australia/Melbourne"
 
 config :robotica_ui,
-  config_file: "/etc/robotica/ui-{hostname}.yaml"
+  config_file: "/etc/robotica/ui-{hostname}.yaml",
+  timezone: "Australia/Melbourne"
 
 config :lifx,
   tcp_server: false,
@@ -26,8 +27,6 @@ config :lifx,
   max_api_timeout: 5000,
   max_retries: 3,
   wait_between_retry: 500
-
-config :tzdata, :autoupdate, :disabled
 
 # Customize non-Elixir parts of the firmware.  See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.
