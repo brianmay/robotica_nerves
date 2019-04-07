@@ -48,15 +48,15 @@ defmodule RoboticaNerves.MixProject do
   # Specify target specific dependencies
   defp deps("host") do
     [
-      {:scenic_driver_glfw, "~> 0.9"}
+      {:scenic_driver_glfw, "~> 0.10"}
     ]
   end
 
   defp deps("rpi3" = target) do
     deps_nerves() ++
       [
-        {:scenic_driver_nerves_rpi, "~> 0.9"},
-        {:scenic_driver_nerves_touch, "~> 0.9"}
+        {:scenic_driver_nerves_rpi, "~> 0.10"},
+        {:scenic_driver_nerves_touch, "~> 0.10"}
       ] ++ system(target)
   end
 
