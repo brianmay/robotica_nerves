@@ -26,7 +26,8 @@ config :lifx,
   # Should be at least max_retries*wait_between_retry.
   max_api_timeout: 5000,
   max_retries: 3,
-  wait_between_retry: 500
+  wait_between_retry: 500,
+  udp: Lifx.Udp
 
 # Customize non-Elixir parts of the firmware.  See
 # https://hexdocs.pm/nerves/advanced-configuration.html for details.
