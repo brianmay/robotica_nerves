@@ -5,7 +5,7 @@
 ##  for read only filesystem.
 
 # -name robotica_nerves@0.0.0.0
--setcookie Q3Oeku95KidMNLhADVBe0ypv/ILZ3aoNFexxvLpHu/i4lxVItVuEZ8/INmPXXHbn
+-setcookie <%= @release.options[:cookie] %>
 
 ## Use Ctrl-C to interrupt the current shell rather than invoking the emulator's
 ## break handler and possibly exiting the VM.
