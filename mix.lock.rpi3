@@ -39,6 +39,7 @@
   "poison": {:hex, :poison, "4.0.1", "bcb755a16fac91cad79bfe9fc3585bb07b9331e50cfe3420a24bcc2d735709ae", [:mix], [], "hexpm"},
   "ranch": {:hex, :ranch, "1.7.1", "6b1fab51b49196860b733a49c07604465a47bdb78aa10c1c16a3d199f7f8c881", [:rebar3], [], "hexpm"},
   "ring_logger": {:hex, :ring_logger, "0.8.0", "b1baddc269099b2afe2ea3a87b8e2b71e57331c0000038ae55090068aac679db", [:mix], [], "hexpm"},
+  "robotica_plugins": {:git, "https://github.com/brianmay/robotica-plugins.git", "4cfdaf5a88d89f064d49ff822d39fff28beb9472", []},
   "robotica_rpi3": {:hex, :robotica_rpi3, "1.8.1", "7b662963a23782bc7391e9ff93543135ab5dcfe35da388d0208dd43a362f0205", [:mix], [{:nerves, "~> 1.5.0", [hex: :nerves, repo: "hexpm", optional: false]}, {:nerves_system_br, "1.8.4", [hex: :nerves_system_br, repo: "hexpm", optional: false]}, {:nerves_system_linter, "~> 0.3.0", [hex: :nerves_system_linter, repo: "hexpm", optional: false]}, {:nerves_toolchain_arm_unknown_linux_gnueabihf, "1.2.0", [hex: :nerves_toolchain_arm_unknown_linux_gnueabihf, repo: "hexpm", optional: false]}], "hexpm"},
   "scenic": {:hex, :scenic, "0.10.2", "f4f0a00eed677ac50a7b297375c0323d03f4273580f17c50b877abfaf0c6dc1f", [:make, :mix], [{:elixir_make, "~> 0.5", [hex: :elixir_make, repo: "hexpm", optional: false]}, {:font_metrics, "~> 0.3", [hex: :font_metrics, repo: "hexpm", optional: false]}], "hexpm"},
   "scenic_clock": {:hex, :scenic_clock, "0.10.0", "5be4a87ed425c07ae9d05e833eddbdcc026b67ba8059fc979586e2efc067cd77", [:mix], [{:scenic, "~> 0.10", [hex: :scenic, repo: "hexpm", optional: false]}], "hexpm"},
