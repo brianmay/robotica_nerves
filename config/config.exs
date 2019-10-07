@@ -87,6 +87,8 @@ config :logger,
 
 config :logger, RingLogger, max_size: 1000
 
+import_config "robotica_face.exs"
+
 # Import target specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations
