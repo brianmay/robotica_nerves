@@ -16,6 +16,11 @@ config :robotica_ui,
   config_file: "/etc/robotica/ui-{hostname}.yaml",
   timezone: "Australia/Melbourne"
 
+config :robotica_plugins,
+  map_types: [
+    {Robotica.Plugin, {Robotica.Validation, :validate_plugin_config}}
+  ]
+
 config :lifx,
   tcp_server: false,
   tcp_port: 8800,
