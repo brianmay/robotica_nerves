@@ -7,7 +7,7 @@
   "cowlib": {:hex, :cowlib, "2.7.3", "a7ffcd0917e6d50b4d5fb28e9e2085a0ceb3c97dea310505f7460ff5ed764ce9", [:rebar3], [], "hexpm"},
   "dns": {:hex, :dns, "2.1.2", "81c46d39f7934f0e73368355126e4266762cf227ba61d5889635d83b2d64a493", [:mix], [{:socket, "~> 0.3.13", [hex: :socket, repo: "hexpm", optional: false]}], "hexpm"},
   "elixir_make": {:hex, :elixir_make, "0.6.0", "38349f3e29aff4864352084fc736fa7fa0f2995a819a737554f7ebd28b85aaab", [:mix], [], "hexpm"},
-  "event_bus": {:hex, :event_bus, "1.6.0", "00a26d524f061dd142c170afd2084698fcf2c57c434da180ba0b507728d83dd9", [:mix], [], "hexpm"},
+  "event_bus": {:hex, :event_bus, "1.6.1", "07331328b67ccc76d14a12872013464106390abaa47ea0d6a7755e3524899964", [:mix], [], "hexpm"},
   "font_metrics": {:hex, :font_metrics, "0.3.1", "025ff9957040eb4d6430c306a4445bad5d9f43ec24448c1647df7cb63b5dd88c", [:mix], [{:msgpax, "~> 2.2", [hex: :msgpax, repo: "hexpm", optional: false]}], "hexpm"},
   "gen_state_machine": {:hex, :gen_state_machine, "2.0.5", "9ac15ec6e66acac994cc442dcc2c6f9796cf380ec4b08267223014be1c728a95", [:mix], [], "hexpm"},
   "gettext": {:hex, :gettext, "0.17.0", "abe21542c831887a2b16f4c94556db9c421ab301aee417b7c4fbde7fbdbe01ec", [:mix], [], "hexpm"},
